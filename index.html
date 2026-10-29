@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battleship BD</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <h1 id="title">Battleship BD</h1>
+  <p id="tagline" class="tagline"></p>
+  <button id="langBtn" class="lang-btn" type="button">Bangla</button>
+</header>
+
+<main>
+  <section class="panel" id="placePanel">
+    <h2 id="placeTitle"></h2>
+    <p id="placeHint" class="hint"></p>
+    <div id="shipPicker" class="picker"></div>
+    <div class="controls">
+      <button id="orientBtn" type="button"></button>
+      <button id="randomBtn" type="button"></button>
+      <button id="clearBtn" type="button"></button>
+      <button id="startBtn" type="button" class="primary"></button>
+    </div>
+    <p id="error" class="error" role="alert"></p>
+  </section>
+
+  <p id="battleHint" class="hint" style="display:none"></p>
+  <p id="status" class="status" role="status"></p>
+
+  <section class="boards">
+    <div class="board-wrap">
+      <h2 id="yourFleetLabel"></h2>
+      <div id="playerGrid" class="grid" role="grid" aria-label="Your board"></div>
+      <div id="playerFleet" class="fleet"></div>
+    </div>
+    <div class="board-wrap">
+      <h2 id="enemyLabel"></h2>
+      <div id="enemyGrid" class="grid" role="grid" aria-label="Enemy board"></div>
+      <div id="enemyFleet" class="fleet"></div>
+    </div>
+  </section>
+
+  <section id="gameOver" class="panel over" style="display:none">
+    <h2 id="overTitle"></h2>
+    <p id="overDetail"></p>
+    <button id="playAgainBtn" type="button" class="primary"></button>
+  </section>
+
+  <section class="panel stats">
+    <h2 id="statsTitle"></h2>
+    <dl>
+      <div><dt id="statWinsLabel"></dt><dd id="statWins">0</dd></div>
+      <div><dt id="statLossesLabel"></dt><dd id="statLosses">0</dd></div>
+      <div><dt id="statShotsLabel"></dt><dd id="statShots">0</dd></div>
+      <div><dt id="statHitsLabel"></dt><dd id="statHits">0</dd></div>
+      <div><dt id="statAccLabel"></dt><dd id="statAcc">-</dd></div>
+    </dl>
+    <button id="newGameBtn" type="button"></button>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="js/logic.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
